@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h3>C4E Blog<h3>
+
+    <!-- jinja2 -->
+    {% for post in posts %}
+
+      <h5>{{post.title}}<h5>
+      <p>
+        {{post.content}}
+      </p>
+      {% if post.gender == 1 %}
+      <i>By: Mr. {{post.author}} </i>
+      {% elif post.gender == 0 %}
+      <i>By: Ms. {{post.author}} </i>
+      {% endif %}
+
+    {% endfor %}
+
+        <h5>Thơ củ lạc</h5>
+    <p>
+      Hi
+      <br>
+      Hello
+    <p>
+    <i>By: Yến </i>
+
+  </body>
+</html>

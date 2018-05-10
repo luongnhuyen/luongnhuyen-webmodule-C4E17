@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    kq = {{kq}}
+    {% if kq < 16 %}
+    <i>Severely underweight </i>
+    {% elif kq < 18.5 %}
+    <i>Underweight</i>
+    {% elif kq < 25 %}
+    <i>Normal</i>
+    {% elif kq < 30 %}
+    <i>Overweight</i>
+    {% else %}
+    <i>Obese</i>
+    {% endif %}
+
+  </body>
+</html>
