@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Warm Winter</title>
+  </head>
+  <body>
+    <h1>Search ID</h1>
+    {% for service in all_service %}
+      <div>
+        {% if service.gender == 1 %}
+        <img src="../static/male-profile.jpg" alt="image">
+        {% else %}
+        <img src="../static/female-profile.jpg" alt="image">
+        {% endif %}
+
+        <p>Name: {{service.name}}</p>
+        <p>Gender: {{service.gender}}</p>
+        <p>Email: {{service.email}}</p>
+        <p>Phone: {{service.phone}}</p>
+        <p>Job: {{service.job}}</p>
+        <p>Company: {{service.company}}</p>
+        <p>Address: {{service.address}}</p>
+        <p>Contacted: {{service.contacted}}</p>
+        <hr>
+      <div>
+    {% endfor %}
+  </body>
+</html>
