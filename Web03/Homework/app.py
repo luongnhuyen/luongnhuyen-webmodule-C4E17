@@ -16,21 +16,19 @@ def admin():
     all_service = Service.objects()
     return render_template('admin.html',all_service = all_service)
 
-@app.route('/new-service',methods=['GET','POST'])
-def creat():
-    if request.method == "GET":
-        return render_template('new-service.html')
-    elif request.method == "POST":
-        form = request.form
-        name = form['name']
-        yob = form['yob']
-        new_service = Service(name=name, yob=yob)
-        new_service.save()
+@app.route('/delete/<service_id>')
+def delete(service_id):
+    service_to_delete = Service.objects.with_id(service_id)
+    if service_to_delete is not None:
+        service_to_delete.delete()
         return redirect(url_for('admin'))
+    else:
+        return "Service not found"
 
 @app.route('/remove-all')
 def remove_all():
-    db.Service.remove({})
+    all_service = Service.objects()
+    all_service.remove()
     return redirect(url_for('admin'))
 
 @app.route('/service-page')
@@ -50,9 +48,17 @@ def searchid(id):
 
 @app.route('/gender')
 def gender():
-    return render_template('gender.html')
-
-
+    if request.method == "GET":
+        return render_template('gender.html')
+    elif request.method == "POST":
+        form = request.form
+        name = form['name']
+        yob = form['yob']
+        phone = form['phone']
+        gender = form['gender']
+        new_service = Service(name=name, yob=yob, phone=phone, gender=gender)
+        new_service.save()
+        return redirect(url_for('admin'))
 
 if __name__ == '__main__':
   app.run(debug=True)
