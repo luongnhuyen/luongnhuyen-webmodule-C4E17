@@ -34,7 +34,7 @@
           <td>{{service.description}}</td>
           <td>{{service.measurements}}</td>
           <td>
-            <a href="#">Sua </a>
+            <a href="{{url_for('update_service',service_id=service.id)}}">Sua </a>
             <br>
             <a href="{{url_for('delete',service_id=service.id)}}">Xoa </a>
           </td>

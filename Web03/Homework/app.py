@@ -63,5 +63,37 @@ def gender():
         new_service.save()
         return redirect(url_for('admin'))
 
+@app.route('/update-service/<service_id>',methods=['GET','POST'])
+def update_service(service_id):
+    all_service = Service.objects.with_id(service_id)
+    if request.method == "GET":
+        return render_template('update-service.html')
+    elif request.method == "POST":
+        form = request.form
+        name = form['name']
+        yob = form['yob']
+        address = form['address']
+        phone = form['phone']
+        height = form['height']
+        status = form['status']
+        description = form['description']
+        measurements = form['measurements']
+        if form['gender'] == "male":
+            gender = 1
+        elif form['gender']== "female":
+            gender = 0
+        new_service = Service(name=name,
+                              yob=yob,
+                              address=address,
+                              phone=phone,
+                              height=height,
+                              status=status,
+                              description=description,
+                              measurements=measurements,
+                              gender=gender)
+        new_service.save()
+        return redirect(url_for('admin'))
+
+
 if __name__ == '__main__':
   app.run(debug=True)
