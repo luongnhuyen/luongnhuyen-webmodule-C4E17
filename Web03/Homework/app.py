@@ -28,7 +28,7 @@ def delete(service_id):
 @app.route('/remove-all')
 def remove_all():
     all_service = Service.objects()
-    all_service.remove()
+    all_service.delete()
     return redirect(url_for('admin'))
 
 @app.route('/service-page')
@@ -46,7 +46,7 @@ def searchid(id):
     all_service = Service.objects(id=id)
     return render_template('searchid.html',all_service=all_service)
 
-@app.route('/gender')
+@app.route('/gender',methods=['GET','POST'])
 def gender():
     if request.method == "GET":
         return render_template('gender.html')
@@ -55,7 +55,10 @@ def gender():
         name = form['name']
         yob = form['yob']
         phone = form['phone']
-        gender = form['gender']
+        if form['gender'] == "male":
+            gender = 1
+        elif form['gender']== "female":
+            gender = 0
         new_service = Service(name=name, yob=yob, phone=phone, gender=gender)
         new_service.save()
         return redirect(url_for('admin'))
