@@ -11,8 +11,10 @@
         {% if service.gender == 1 %}
         <img src="../static/male-profile.jpg" alt="image">
         {% else %}
+
         <img src="../static/female-profile.jpg" alt="image">
         {% endif %}
+    {% endfor %}  
         <form method='post'>
           <label>Tên</label>
           <input type="text" name="name" value="name"><br>
@@ -32,6 +34,6 @@
         </form>
         <hr>
       <div>
-    {% endfor %}
+
   </body>
 </html>

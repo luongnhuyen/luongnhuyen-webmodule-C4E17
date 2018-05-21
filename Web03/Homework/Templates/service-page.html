@@ -6,6 +6,7 @@
   </head>
   <body>
     <h1>Service page</h1>
+    <a href="{{url_for('gender')}}">Gender </a>
     {% for service in all_service %}
       <div>
         {% if service.gender == 1 %}

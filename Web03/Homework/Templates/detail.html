@@ -13,7 +13,7 @@
         {% else %}
         <img src="../static/female-profile.jpg" alt="image">
         {% endif %}
-
+    {% endfor %}
         <p>Name: {{service.name}}</p>
         <p>Yob: {{service.yob}}</p>
         <p>Gender: {{service.gender}}</p>
@@ -25,6 +25,6 @@
         <p>Measurements: {{service.measurements}}</p>
         <hr>
       <div>
-    {% endfor %}
+
   </body>
 </html>
