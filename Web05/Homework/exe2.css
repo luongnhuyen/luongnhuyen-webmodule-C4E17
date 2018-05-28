@@ -53,45 +53,15 @@
   margin-right: 30px;
 }
 
-.bg-image-1 {
-  background-image: url('icons/nav-tastemakers.png');
-  background-position: center;
-  background-size: 100%;
-}
-
-.bg-image-2 {
-  background-image: url('icons/nav-blog.png');
-  background-position: center;
-  background-size: 100%;
-}
-
-.bg-image-3 {
-  background-image: url('icons/nav-alist.png');
-  background-position: center;
-  background-size: 100%;
-}
-
-.bg-image-4 {
-  background-image: url('icons/nav-contribute.png');
-  background-position: center;
-  background-size: 100%;
-}
-
-.bg-image-5 {
-  background-image: url('icons/nav-about.png');
-  background-position: center;
-  background-size: 100%;
-}
-
 #box-gray {
-  height: 350px;
+  height: 300px;
   width: 100%;
   background-color: #CFD8DC;
 }
 
 #flex-header {
   display: flex;
-  height: 550px;
+  height: 530px;
   width: 100%;
   background-color: lightgreen;
   flex-direction: column;
@@ -119,9 +89,11 @@
 }
 
 #box-green {
-  height: 100px;
+  height: 70px;
   width: 24.5%;
-  background-color: green;
+  background-color: #ECEFF1;
+  color: #009688;
+  font-size: 18px;
 }
 
 #flex-box-1 {
@@ -155,31 +127,87 @@
 }
 
 #box-blue {
-  height: 70px;
+  height: 40px;
   width: 60%;
-  background-color: dodgerblue;
+  margin-top: 5px;
 }
 
-#box-pink {
-  height: 70px;
+#box-email {
+  height: 40px;
   width: 40%;
-  background-color: pink;
+  text-align: center;
+  margin-top: 10px;
 }
 
 #box-yellow {
-  height: 200px;
+  height: 170px;
   width: 24%;
   background-color: yellow;
 }
 
-#box-pink-1 {
+#box-news {
   height: 400px;
   width: 24%;
-  background-color: pink;
+  color: #009688;
+  font-size: 18px;
 }
 
 #box-gray-1 {
-  height: 100px;
+  height: 70px;
   width: 100%;
   background-color: #CFD8DC;
+}
+
+.bg-image-1 {
+  background-image: url('icons/nav-tastemakers.png');
+  background-position: center;
+  background-size: 100%;
+}
+
+.bg-image-2 {
+  background-image: url('icons/nav-blog.png');
+  background-position: center;
+  background-size: 100%;
+}
+
+.bg-image-3 {
+  background-image: url('icons/nav-alist.png');
+  background-position: center;
+  background-size: 100%;
+}
+
+.bg-image-4 {
+  background-image: url('icons/nav-contribute.png');
+  background-position: center;
+  background-size: 100%;
+}
+
+.bg-image-5 {
+  background-image: url('icons/nav-about.png');
+  background-position: center;
+  background-size: 100%;
+}
+
+.bg-yellow-1 {
+  background-image: url('cookbooks-blog.jpg');
+  background-position: center;
+  background-size: 100%;
+}
+
+.bg-yellow-2 {
+  background-image: url('potato.jpg');
+  background-position: center;
+  background-size: 100%;
+}
+
+.bg-yellow-3 {
+  background-image: url('pinterest.jpg');
+  background-position: center;
+  background-size: 100%;
+}
+
+.bg-yellow-4 {
+  background-image: url('dinner-blog.jpg');
+  background-position: center;
+  background-size: 100%;
 }
